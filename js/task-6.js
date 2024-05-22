@@ -44,9 +44,10 @@ const destroyBtn = document.querySelector('#controls button[data-destroy]');
 function createBoxes(amount) {
   destroyBoxes();
   let setOfBoxes = '';
+  let count = 30;
   for (let i = 0; i < amount; i++) {
-    const boxSize = 30 + i * 10;
-    setOfBoxes += `<div style="width: ${boxSize}px; height: ${boxSize}px; background-color: ${getRandomHexColor()}"></div>`;
+    count += 10;
+    setOfBoxes += `<div style="width: ${count}px; height: ${count}px; background-color: ${getRandomHexColor()}"></div>`;
   }
   boxes.insertAdjacentHTML('beforeend', setOfBoxes);
 }
